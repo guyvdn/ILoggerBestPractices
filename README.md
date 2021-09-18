@@ -1,0 +1,2 @@
+# ILoggerBestPractices
+ILogger best practices
