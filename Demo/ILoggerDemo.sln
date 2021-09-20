@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILoggerDemoService", "ILoggerDemoService\ILoggerDemoService.csproj", "{46E5546A-E39B-4C37-8D68-DAC01C67AF9F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILoggerDemoCore", "ILoggerDemoCore\ILoggerDemoCore.csproj", "{AB237112-999E-49AA-B92E-CB204B21F8CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46E5546A-E39B-4C37-8D68-DAC01C67AF9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E5546A-E39B-4C37-8D68-DAC01C67AF9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E5546A-E39B-4C37-8D68-DAC01C67AF9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E5546A-E39B-4C37-8D68-DAC01C67AF9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB237112-999E-49AA-B92E-CB204B21F8CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB237112-999E-49AA-B92E-CB204B21F8CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB237112-999E-49AA-B92E-CB204B21F8CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB237112-999E-49AA-B92E-CB204B21F8CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D29308F-9613-4145-B421-5DFB87F95980}
+	EndGlobalSection
+EndGlobal
