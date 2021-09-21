@@ -89,10 +89,13 @@ Guy Van den Nieuwenhof
 
 ### Gebruik structured logs
 
+<div class="fragment fade-in">
+
 ```csharp
 logger.LogWarning("The person {PersonId} could not be found.", personId);
 ```
-<!-- .element class="fragment fade-in-then-semi-out" -->
+
+</div>
 
 Dit statement zal volgende properties loggen
 <!-- .element class="fragment fade-in-then-semi-out" -->
@@ -201,10 +204,13 @@ Dit statement zal volgende properties loggen
   <li class="fragment fade-in-then-semi-out">Er zijn tevens exception specifieke overloads om de errors te formatteren en op te slaan</li>
 </ul>
 
+<div class="fragment fade-in">
+
 ```csharp
 logger.LogWarning(exception, "An exception occured")
 ```
-<!-- .element: class="fragment" -->
+
+</div>
 
 ----
 
@@ -218,10 +224,11 @@ logger.LogWarning(exception, "An exception occured")
 
 ### Scopes
 
-
 <ul>
     <li class="fragment fade-in-then-semi-out">Gebruik scopes om custom properties toe te voegen aan alle logs binnen een specifieke context</li>
 </ul>
+
+<div class="fragment fade-in">
 
 ```csharp [1|2|4,5]
 using (logger.BeginScope(
@@ -232,7 +239,9 @@ using (logger.BeginScope(
 }
 ```
 
-<!-- .element: class="fragment" -->
+</div>
+
+
 <ul>
   <li class="fragment fade-in-then-semi-out">Beide logs zullen nu een extra PersonId property bevatten</li>
   <li class="fragment fade-in-then-semi-out">De meeste scope implementaties werken zelfs correct in parallele code omdat ze de async context gebruiken</li>
@@ -271,8 +280,6 @@ using (logger.BeginScope(
     },
     ✂
 ```
-
-<!-- .element: class="fragment" -->
 
 ----
 
@@ -387,8 +394,9 @@ docker run -d --restart unless-stopped --name seq -e ACCEPT_EULA=Y -v C:\Temp\Lo
 ### Registratie van LoggingBehavior
 
 Via ServiceCollection extension
-
 <!-- .element: class="fragment" -->
+
+<div class="fragment fade-in">
 
 ```csharp [3|4|5]
 public static IServiceCollection AddLoggingBehavior(this IServiceCollection serviceCollection)
@@ -400,15 +408,16 @@ public static IServiceCollection AddLoggingBehavior(this IServiceCollection serv
 }
 ```
 
-<!-- .element: class="fragment" -->
+</div>
 
 ----
 
 ### TryAddTransientExact
 
 Deze doet controle op <a href="#">ServiceType</a> én <a href="#">ImplementationType</a>
-
 <!-- .element: class="fragment" -->
+
+<div class="fragment fade-in">
 
 ```csharp [3|8]
 private static void TryAddTransientExact(this IServiceCollection services, Type serviceType, Type implementationType)
@@ -422,7 +431,7 @@ private static void TryAddTransientExact(this IServiceCollection services, Type 
 }
 ```
 
-<!-- .element: class="fragment" -->
+</div>
 
 ----
 
@@ -430,6 +439,8 @@ private static void TryAddTransientExact(this IServiceCollection services, Type 
 
 Dit Attribute kan je gebruiken om extra <a href="#">properties</a> van de <a href="#">MediatR request</a> te loggen in de <a href="#">LogginScope</a>
 <!-- .element: class="fragment" -->
+
+<div class="fragment fade-in">
 
 ```csharp [3,4]
 public class Request : IRequest<Response>
@@ -440,7 +451,8 @@ public class Request : IRequest<Response>
     public Guid NotLoggedProperty { get; set; }
 }
 ```
-<!-- .element: class="fragment" -->
+
+</div>
 
 Het is een opt-in verhaal. `LoggedProperty` zal dus gelogged worden en `NotLoggedProperty` niet.
 <!-- .element: class="fragment" -->
