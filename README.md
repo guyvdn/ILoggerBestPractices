@@ -7,7 +7,8 @@ title: ILogger Demo
 <em>Aanbevelingen en best practices</em>
 <br/><br/>
 Guy Van den Nieuwenhof
-
+<br/>
+<a href="https://github.com/guyvdn">github.com/guyvdn</a>
 ---
 
 ### Agenda
